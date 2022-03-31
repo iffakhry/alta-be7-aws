@@ -1,0 +1,9 @@
+Port: 8080
+SecretJWT: "S3CR3T"
+Database:
+  Port: 3306
+  Driver: "mysql"
+  Name: "altagormdb"
+  Address: "127.0.0.1"
+  Username: "root"
+  Password: "qwerty123"
