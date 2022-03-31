@@ -22,4 +22,4 @@ jobs:
           docker stop altabe7container
           docker rm altabe7container
           docker build -t altabe7image:latest .
-          docker run -d -p 8080:8080 -e APP_PORT="8080" -e DB_PORT="3306" -e DB_DRIVER="mysql" -e DB_NAME="altagormdb" -e DB_ADDRESS="database-be7.cca0n6ft2kkh.ap-southeast-1.rds.amazonaws.com" -e DB_USERNAME="admin" -e DB_PASSWORD="qwerty123" --name altabe7container altabe7image:latest
+          docker run -d -p 8080:8080 -e APP_PORT="8080" -e DB_PORT="3306" -e DB_DRIVER="mysql" -e DB_NAME="altagormdb" -e DB_ADDRESS="${{ secrets.DBHOST }}" -e DB_USERNAME="${{ secrets.DBUSERNAME }}" -e DB_PASSWORD="${{ secrets.DBPASSWORD }}" --name altabe7container altabe7image:latest
