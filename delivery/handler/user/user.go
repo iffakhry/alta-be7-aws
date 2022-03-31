@@ -65,7 +65,7 @@ func (uh *UserHandler) GetByIdHandler() echo.HandlerFunc {
 func (uh *UserHandler) GetHelloHandler() echo.HandlerFunc {
 	return func(c echo.Context) error {
 
-		return c.JSON(http.StatusOK, helper.ResponseSuccessWithoutData("success get hello"))
+		return c.JSON(http.StatusOK, helper.ResponseSuccessWithoutData("success get hello feature"))
 	}
 }
 
